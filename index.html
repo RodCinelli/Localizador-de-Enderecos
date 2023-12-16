@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de Endereços</title>
+</head>
+
+<body>
+    <main>
+        <h1>Localizador de Endereços</h1>
+        <form>
+            <input type="text" id="CEP" name="CEP" placeholder="Digite o CEP">
+            <input type="text" id="endereco" placeholder="Digite o Endereço">
+            <div class="buttons-wrapper">
+                <button class="btBuscar" type="submit">Buscar</button>
+                <button class="btLimpar" type="button">Limpar</button>
+            </div>
+            <div id="map"></div>
+        </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="env.js"></script>
+    <script src="./script.js"></script> <!-- Adicione o caminho correto do seu arquivo JavaScript -->
+    <script type="text/javascript">
+        function loadGoogleMapsAPI() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${env.GOOGLE_MAPS_API_KEY}&callback=initMap`;
+            document.head.appendChild(script);
+        }
+    
+        window.onload = loadGoogleMapsAPI;
+    </script>
+</body>
+
+</html>

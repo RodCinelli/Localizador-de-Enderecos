@@ -1,0 +1,151 @@
+/* Define a imagem de fundo para o corpo da página, estilizações para cobrir toda a tela e fixar durante a rolagem */
+body {
+    background-image: url('images/nightcity.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    margin: 0; 
+}
+
+/* Estilo para o contêiner principal que contém o conteúdo da página */
+main {
+    background-color: rgb(253, 249, 239);
+    width: 500px;
+    max-width: 95%; 
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 3px black;
+    margin: 10px; 
+}
+
+/* Estilo para o campo de entrada onde o usuário digita o CEP */
+#CEP {
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0; 
+    margin-left: 50px;
+    border: 2px solid rgba(204, 204, 204, 0.959);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+/* Estilo para o campo de entrada onde o usuário digita o endereço */
+#endereco {
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0; 
+    margin-left: 50px;
+    border: 2px solid rgba(204, 204, 204, 0.959);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+/* Estilo para o campo CEP quando está focado (usuário clicou nele) */
+#CEP:focus {
+    border-color: #e7c566;
+    outline: none;
+}
+
+/* Estilo para o campo endereço quando está focado (usuário clicou nele) */
+#endereco:focus {
+    border-color: #e7c566;
+    outline: none;
+}
+
+/* Estilo para o cabeçalho da página */
+h1 {
+    font-family: monospace;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #00000075;
+    margin: 10px 0;
+}
+
+/* Estilo compartilhado para os botões Buscar e Limpar */
+.btBuscar, .btLimpar {
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px; /* Mantém um pequeno espaçamento ao redor dos botões */
+}
+
+/* Estilo para o wrapper que contém os botões, ajudando a organizá-los */
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+/* Estilos individuais para os botões ao passar o mouse por cima */
+.btBuscar {
+    background-color: #78d14b;
+    border-color: #5ca837;
+}
+
+.btBuscar:hover {
+    background-color: #14c24e; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btLimpar {
+    background-color: #ff4d4d;
+    border-color: #cc3333;
+}
+
+.btLimpar:hover {
+    background-color: #cc0000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o parágrafo que exibe o resultado do CEP buscado */
+p {
+    font-size: 19px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Tamanho menor da fonte para a mensagem de erro */
+.mensagem-erro-menor {
+    font-size: 1.0em;
+    color: darkred;
+    font-weight: bold;
+}
+
+.mensagem-adicional {
+    font-size: 1.0em;
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* Estilo para o elemento que exibe o mapa */
+#map {
+    width: 450px;
+    height: 400px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-left: 26px;
+    align-self: center;   
+}
+
+
